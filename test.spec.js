@@ -50,3 +50,19 @@ describe('test has function', () => {
         expect(m1.has(4)).not.toBe(true);
 	})
 })
+
+describe('test clear function', () => {
+    it('clear', ()=>{
+        const m1 = new mySet([1,2])
+        m1.clear();
+        expect(m1.size).toBe(0);
+    })
+})
+
+describe('test Sybmol.iterator function-->', () => {
+    it('Sybmol.iterator', ()=>{
+        const m1 = new mySet([1,2])
+        const n = m1[Symbol.iterator]();
+        expect(n.next().value).toBe(1);
+    })
+})

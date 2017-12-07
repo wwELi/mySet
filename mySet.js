@@ -55,7 +55,7 @@ class mySet{
     }
 
     [Symbol.iterator]() {
-	  return setList[Symbol.iterator].apply(this.setList);
+	  return this.setList[Symbol.iterator].apply(this.setList);
     }
 }
 
